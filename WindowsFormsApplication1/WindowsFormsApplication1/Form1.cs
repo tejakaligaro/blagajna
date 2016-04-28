@@ -54,25 +54,32 @@ namespace WindowsFormsApplication1
             var idizdelka = ((izdelek)izdelki.SelectedItem).Id;
             var stevilkaracuna = stevilka.Text;
 
+            var cmd2 = DB.GetCommand("select id from racuni where stevilka = '" + stevilkaracuna + "'");
+            var r2 = cmd2.ExecuteReader();
+            r2.Read();
+            var idracuna = r2.GetInt32(0);
+
             var cmd = DB.GetCommand("dodajizdelek");
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("stevilkaracuna", stevilkaracuna);
+            cmd.Parameters.AddWithValue("idracuna", idracuna);
             cmd.Parameters.AddWithValue("idizdelka", idizdelka);
             var r = cmd.ExecuteReader();
 
-            var skupaj = 0.0;
             postavke.Items.Clear();
             while (r.Read())
             {
                 var ime = r.GetString(0);
                 var neto = r.GetDouble(1);
                 var bruto = r.GetDouble(2);
-                skupaj += bruto;
 
                 postavke.Items.Add(new ListViewItem(new string[] { ime, neto.ToString ("###,##0.00"), bruto.ToString("###,##0.00") }));
             }
 
-            znesek.Text = skupaj.ToString("###,##0.00");
+            var cmd3 = DB.GetCommand("select zaplacilo from racuni where stevilka = '" + stevilkaracuna + "'");
+            var r3 = cmd3.ExecuteReader();
+            r3.Read();
+            var zaplacilo = r3.GetDouble(0);
+            znesek.Text = zaplacilo.ToString("###,##0.00");
         }
     }
 
