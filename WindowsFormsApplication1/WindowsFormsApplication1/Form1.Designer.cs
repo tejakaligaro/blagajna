@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.postavke = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.znesek = new System.Windows.Forms.Label();
             this.stevilka = new System.Windows.Forms.TextBox();
             this.novracun = new System.Windows.Forms.Button();
             this.dodajanje = new System.Windows.Forms.Button();
             this.izdelki = new System.Windows.Forms.ComboBox();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ImeBlagajnika = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // postavke
@@ -51,6 +52,23 @@
             this.postavke.TabIndex = 0;
             this.postavke.UseCompatibleStateImageBehavior = false;
             this.postavke.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Izdelek";
+            this.columnHeader1.Width = 322;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Neto cena";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader2.Width = 134;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Bruto cena";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader3.Width = 146;
             // 
             // znesek
             // 
@@ -96,28 +114,21 @@
             this.izdelki.Size = new System.Drawing.Size(350, 21);
             this.izdelki.TabIndex = 5;
             // 
-            // columnHeader1
+            // ImeBlagajnika
             // 
-            this.columnHeader1.Text = "Izdelek";
-            this.columnHeader1.Width = 322;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Neto cena";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader2.Width = 134;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Bruto cena";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader3.Width = 146;
+            this.ImeBlagajnika.AutoSize = true;
+            this.ImeBlagajnika.Location = new System.Drawing.Point(12, 379);
+            this.ImeBlagajnika.Name = "ImeBlagajnika";
+            this.ImeBlagajnika.Size = new System.Drawing.Size(35, 13);
+            this.ImeBlagajnika.TabIndex = 6;
+            this.ImeBlagajnika.Text = "label1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(667, 404);
+            this.Controls.Add(this.ImeBlagajnika);
             this.Controls.Add(this.izdelki);
             this.Controls.Add(this.dodajanje);
             this.Controls.Add(this.novracun);
@@ -126,6 +137,7 @@
             this.Controls.Add(this.postavke);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Shown += new System.EventHandler(this.Form1_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,6 +154,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.Label ImeBlagajnika;
     }
 }
 

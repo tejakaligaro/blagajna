@@ -14,6 +14,8 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
+        public string Blagajnik;
+
         public Form1()
         {
             InitializeComponent();
@@ -80,6 +82,11 @@ namespace WindowsFormsApplication1
             r3.Read();
             var zaplacilo = r3.GetDouble(0);
             znesek.Text = zaplacilo.ToString("###,##0.00");
+        }
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            ImeBlagajnika.Text = "Blagajnik: " + Blagajnik;
         }
     }
 

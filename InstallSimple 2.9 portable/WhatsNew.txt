@@ -1,0 +1,147 @@
+Questions or comments please send to info@InstallSimple.com
+Visit http://www.InstallSimple.com
+for the latest news, downloads, and information on InstallSimple.
+
+
+Version 2.9 [21-08-2015]
+-----------
+[+] Added "Save As" dialog for save setup file
+[-] Removed the "Output Directory" dialog
+[-] Removed the "Display output directory when done" option
+[+] Some minor improvements
+
+
+Version 2.8 [21-01-2015]
+-----------
+[+] Some minor improvements
+[-] Fixed some bugs
+
+
+Version 2.7 [19-08-2012]
+-----------
+[+] Added command line parameter '/s' for silent installation
+[+] Added ability to call the command line after installation (only in PRO version)
+[+] Some minor improvements
+[-] Several minor bugs were fixed
+
+
+Version 2.5 [11-05-2012]
+-----------
+[+] Added support for Wizard Bitmap, the picture which will be displayed on the left of the setup wizard
+[+] Added special folders: System Drive, User Profile, Application Data, Current Directory
+[+] Added 4.0 and 4.5 versions to the .NET Framework requirements list
+[+] Added new option "Associate (*.ispro) files with InstallSimple" to the preferences dialog
+[+] Added support for preview the installation wizard window
+[+] Added if the required .NET Framework is not found, the setup will prompt to download and install it
+[+] Improved interface and some visual elements
+[+] Added other small features
+[-] Fixed problem with wrong check .NET Framework version in some cases
+[-] Fixed problem when setup running very slow from CD/DVD drive
+[-] Fixed some minor bugs
+
+
+Version 2.0 [25-08-2010]
+-----------
+[+] Added ability to change header text color.
+[+] Updated the uninstall module.
+[+] Slightly optimized the compression algorithm.
+[+] Added a new toolbar to the windows registry section.
+[+] Nicer "Browse for folder" dialogs for Win95/NT.
+[+] Increased time delays for splash screen.
+[-] Minor tweaks.
+
+
+Version 1.80 [4-05-2010]
+------------
+[+] Added "Windows 7" to the system requirements list.
+[-] Fixed a small bug where the uninstaller could not remove shortcuts to MS-DOS applications
+[-] Fixed a rare bug in progress bar (introduced in 1.75)
+
+
+Version 1.75 [1-04-2010]
+------------
+[+] The InstallSimple now uses an excellent BZip2 compression.
+[+] Adler32 algorithm now is used to calculate a 32-bit checksums, that is much faster of CRC32.
+[+] Reduced overall memory requirements during packing/unpacking.
+[+] Nicer progress bar.
+[-] Fixed problem with creating big installation packages (>1GB).
+
+
+Version 1.55 [3-02-2010]
+------------
+[+] Added new dialog "Preferences".
+[+] Added ability to set directory for saving installation pack.
+[+] Added support for creation of the multilevel submenu in a program group.
+[+] Added automatic check for updates of InstallSimple.
+[+] Many small improvements (changed Shortcuts section in a project files, optimized some operations, etc.)
+[+] Updated the documentation
+
+
+Version 1.45 [6-10-2009]
+------------
+[+] Added option to check if the .NET Framework installed.
+[+] Added "Windows 2008" to the system requirements list.
+[+] Improved initialization speed.
+[-] Fixed "wrong shortcuts" issue.
+
+
+Version 1.40 [7-04-2009]
+------------
+[+] Added ability to require administrative privileges from end user.
+[+] Updated 'Graphics' window
+[+] Added some other small features
+[-] Fixed a rare bug in the uninstall program (was faulty in some causes)
+    Thanks to all bug reporters :)
+
+
+Version 1.35 [26-09-2008]
+------------
+[+] Added toolbar to wizard
+[+] Added support for creating installation projects
+[+] Added support for DWORD values of windows registry
+[+] When deleting a .hlp file, the uninstaller will now automatically delete any corresponding .gid file as well.
+[+] Added support for Windows XP themes
+
+
+version 1.27 [21-06-2008]
+------------
+[+] Added CRC32 integrity check of installation packages
+
+
+version 1.25 [15-05-2008]
+------------
+[+] Added new step to wizard - "Graphics"
+[+] Added progress bar to wizard
+[+] Improved user interface
+
+
+version 1.15 [31-01-2008]
+------------
+[+] Added special folders: System, Desktop
+[+] Added support for creating shortcuts on the Quick Launch Bar
+
+
+version 1.10 [10-08-2007]
+------------
+[-] All know bugs have been fixed.
+[+] Added 2 new steps to wizard (System Requirements, After Installing)
+[+] Added variable <SetupPath> used for creating entries into Windows Registry
+[+] Added support for creating shortcuts to "Uninstall.exe"
+[+] Updated shortcuts window
+[+] Updated the documentation
+[+] Added many other small features
+
+
+version 1.02 [24-06-2007]
+------------
+[-] Fixed some minor bugs
+
+
+version 1.01 [12-06-2007]
+------------
+[-] Fixed minor bug in uninstall program
+
+
+version 1.0  [10-06-2007]
+------------
+[+] First release

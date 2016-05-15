@@ -1,0 +1,42 @@
+; InstallSimple project
+
+[Setup]
+WindowTitle=Blagajna
+ProductName=Blagajna
+
+[Graphics]
+SplashScreen=
+SplashScreenDelay=3
+Header=
+HeaderJustify=Right
+HeaderFontColor=0
+WizardBitmap=
+WizardFontColor=0
+
+[FirstMessage]
+
+[LastMessage]
+Thank you for using our software.
+
+[LicenseAgreement]
+
+[SetupFiles]
+SourceFolder=D:\blagajna\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug
+SpecialFolder=Program Files
+SetupPath=Blagajna
+SetupFile=D:\blagajna\BlagajnaSetup.exe
+
+[Shortcuts]
+ProgramGroup=Blagajna
+WindowsFormsApplication1.exe=dmp
+
+[Registry]
+
+[Requirements]
+OperatingSystem=WinAll
+NetFramework=0
+NetFrameworkLink=http://www.microsoft.com/en-us/download/details.aspx?id=17718
+AdminRights=0
+
+[AfterInstalling]
+Reboot=0
