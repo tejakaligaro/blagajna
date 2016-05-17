@@ -40,6 +40,8 @@
             this.izdelki = new System.Windows.Forms.ComboBox();
             this.ImeBlagajnika = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.IzpisPDF = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // postavke
@@ -76,7 +78,7 @@
             // znesek
             // 
             this.znesek.AutoSize = true;
-            this.znesek.Location = new System.Drawing.Point(524, 365);
+            this.znesek.Location = new System.Drawing.Point(452, 365);
             this.znesek.Name = "znesek";
             this.znesek.Size = new System.Drawing.Size(41, 13);
             this.znesek.TabIndex = 1;
@@ -130,11 +132,32 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(484, 365);
+            this.label1.Location = new System.Drawing.Point(409, 365);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "Vsota:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(580, 369);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Odjava";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // IzpisPDF
+            // 
+            this.IzpisPDF.Location = new System.Drawing.Point(167, 369);
+            this.IzpisPDF.Name = "IzpisPDF";
+            this.IzpisPDF.Size = new System.Drawing.Size(75, 23);
+            this.IzpisPDF.TabIndex = 9;
+            this.IzpisPDF.Text = "Izpiši PDF";
+            this.IzpisPDF.UseVisualStyleBackColor = true;
+            this.IzpisPDF.Click += new System.EventHandler(this.IzpisPDF_Click);
             // 
             // Form1
             // 
@@ -142,6 +165,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(667, 404);
+            this.Controls.Add(this.IzpisPDF);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ImeBlagajnika);
             this.Controls.Add(this.izdelki);
@@ -171,6 +196,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Label ImeBlagajnika;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button IzpisPDF;
     }
 }
 

@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
 using MySql.Data.MySqlClient;
 
@@ -89,6 +92,9 @@ namespace WindowsFormsApplication1
             ImeBlagajnika.Text = "Blagajnik: " + Blagajnik;
         }
 
+
+
+
         private void znesek_Click(object sender, EventArgs e)
         {
 
@@ -96,6 +102,75 @@ namespace WindowsFormsApplication1
 
         private void postavke_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 prvi = new Form1();
+            prvi.Show();
+            this.Close();
+        }
+
+
+
+
+        private void IzpisPDF_Click(object sender, EventArgs e)
+        {
+
+            {
+                string folderPath = "C:\\Izpisi\\";
+                if (!Directory.Exists(folderPath))
+                {
+                    Directory.CreateDirectory(folderPath);
+                }
+
+                int randomNumber;
+
+                if (true)
+                {
+                    Random random = new Random();
+                    randomNumber = random.Next(0, 1000);
+
+                    
+
+                    DateTime dateTime = DateTime.UtcNow.Date;
+                    using (FileStream stream = new FileStream(folderPath + dateTime.ToString("dd-MM-yyyy_") + randomNumber.ToString() + "_izvoz.pdf", FileMode.Create))
+                    {
+                        Document pdfDoc = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
+                        PdfWriter.GetInstance(pdfDoc, stream);
+                        pdfDoc.Open();
+                        pdfDoc.Add(new Paragraph("Racun st." + stevilka.Text));
+                        pdfDoc.Add(new Paragraph(" "));
+                        pdfDoc.Add(new Paragraph("Datum: " + dateTime.ToString("dd - MM - yyyy")));
+                        pdfDoc.Add(new Paragraph(" "));
+                        pdfDoc.Add(new Paragraph("Blagajnik: " + ImeBlagajnika.Text ));
+                        pdfDoc.Add(new Paragraph(" "));
+                        pdfDoc.Add(new Paragraph("Izdelek:" ));
+                        for(int i = 0; i<postavke.Items.Count;i++)
+                        {
+                         
+                                pdfDoc.Add(new Paragraph(postavke.Items[i].SubItems[0].Text+ " Cena: "+ postavke.Items[i].SubItems[2].Text));
+               
+                        }
+
+                        
+                       
+                        pdfDoc.Close();
+                        stream.Close();
+                    }
+                    MessageBox.Show("Dokument uspešno shranjen v >> C:/Izpisi <<");
+                }
+               
+            }
 
         }
     }
