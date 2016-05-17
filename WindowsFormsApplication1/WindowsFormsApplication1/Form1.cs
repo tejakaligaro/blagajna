@@ -88,6 +88,16 @@ namespace WindowsFormsApplication1
         {
             ImeBlagajnika.Text = "Blagajnik: " + Blagajnik;
         }
+
+        private void znesek_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void postavke_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
     public class izdelek

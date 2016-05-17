@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.postavke = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -38,6 +39,7 @@
             this.dodajanje = new System.Windows.Forms.Button();
             this.izdelki = new System.Windows.Forms.ComboBox();
             this.ImeBlagajnika = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // postavke
@@ -52,6 +54,7 @@
             this.postavke.TabIndex = 0;
             this.postavke.UseCompatibleStateImageBehavior = false;
             this.postavke.View = System.Windows.Forms.View.Details;
+            this.postavke.SelectedIndexChanged += new System.EventHandler(this.postavke_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -78,6 +81,7 @@
             this.znesek.Size = new System.Drawing.Size(41, 13);
             this.znesek.TabIndex = 1;
             this.znesek.Text = "znesek";
+            this.znesek.Click += new System.EventHandler(this.znesek_Click);
             // 
             // stevilka
             // 
@@ -123,11 +127,22 @@
             this.ImeBlagajnika.TabIndex = 6;
             this.ImeBlagajnika.Text = "label1";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(484, 365);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Vsota:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(667, 404);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ImeBlagajnika);
             this.Controls.Add(this.izdelki);
             this.Controls.Add(this.dodajanje);
@@ -155,6 +170,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Label ImeBlagajnika;
+        private System.Windows.Forms.Label label1;
     }
 }
 
